@@ -1,0 +1,27 @@
+<div class="content" role="main">
+  <app-profile
+    [selectedDate]="dateSelector"
+    (newDateEvent)="changeDateSelector($event)"
+  ></app-profile>
+  <div class="card-container">
+    <app-card
+      *ngFor="let date of dataList"
+      [title]="date.title"
+      [currentHours]="
+        {
+          daily: date.timeframes.daily.current,
+          weekly: date.timeframes.weekly.current,
+          monthly: date.timeframes.monthly.current
+        }[dateSelector]
+      "
+      [duration]="dateSelector"
+      [pastHours]="
+        {
+          daily: date.timeframes.daily.previous,
+          weekly: date.timeframes.weekly.previous,
+          monthly: date.timeframes.monthly.previous
+        }[dateSelector]
+      "
+    ></app-card>
+  </div>
+</div>

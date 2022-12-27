@@ -1,0 +1,26 @@
+$Blue: hsl(246, 80%, 60%);
+$DarkBlue: hsl(235, 46%, 20%);
+$VeryDarkBlue: hsl(226, 43%, 10%);
+$DesaturatedBlue: hsl(235, 45%, 61%);
+
+@mixin text($size, $weight, $lineHeight) {
+  font-family: "Rubik";
+  font-size: $size;
+  font-style: normal;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+
+.content {
+  align-items: center;
+  background-color: $VeryDarkBlue;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 518px;
+    width: 860px;
+  }
+}

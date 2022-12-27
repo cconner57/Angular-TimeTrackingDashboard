@@ -1,0 +1,37 @@
+<div class="container">
+  <div
+    class="background"
+    style="background-color: {{
+      {
+        Work: '#FF8B64',
+        Play: '#55C2E6',
+        Study: '#FF5E7D',
+        Exercise: '#4BCF82',
+        Social: '#7335D2',
+        'Self Care': '#F1C75B'
+      }[title]
+    }}"
+  >
+    <img
+      src="../../../assets/images/icon-{{
+        title !== 'Self Care' ? title.toLowerCase() : 'self-care'
+      }}.svg"
+      alt="icon"
+    />
+  </div>
+  <div class="card">
+    <div class="title">
+      <p>{{ title }}</p>
+      <img src="../../../assets/images/icon-ellipsis.svg" alt="ellipsis" />
+    </div>
+    <p class="current-time">{{ currentHours }}hrs</p>
+    <p class="past-time">
+      {{
+        { daily: "Yesterday", weekly: "Last Week", monthly: "Last Month" }[
+          duration
+        ]
+      }}
+      - {{ pastHours }}hrs
+    </p>
+  </div>
+</div>

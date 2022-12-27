@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="profile-info">
+    <img src="../../../assets/images/image-jeremy.png" alt="profile" />
+    <p>Report for</p>
+    <p class="name">Jeremy Robson</p>
+  </div>
+  <div class="date-selector">
+    <p
+      (click)="onDateSelect('daily')"
+      [ngStyle]="{ color: selectedDate === 'daily' ? '#fff' : '#7078C9' }"
+    >
+      Daily
+    </p>
+    <p
+      (click)="onDateSelect('weekly')"
+      [ngStyle]="{ color: selectedDate === 'weekly' ? '#fff' : '#7078C9' }"
+    >
+      Weekly
+    </p>
+    <p
+      (click)="onDateSelect('monthly')"
+      [ngStyle]="{ color: selectedDate === 'monthly' ? '#fff' : '#7078C9' }"
+    >
+      Monthly
+    </p>
+  </div>
+</div>

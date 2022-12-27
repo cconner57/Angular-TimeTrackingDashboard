@@ -1,0 +1,53 @@
+@import '../../app.component.scss';
+
+.container {
+    height: 244px;
+    margin: 0 15px 30px;
+    position: relative;
+    width: 255px;
+    .background {
+        border-radius: 15px;
+        height: 160px;
+        overflow: hidden;
+        position: relative;
+        width: 255px;
+        img {
+            position: absolute;
+            right: 17px;
+            top: -11px;
+        }
+    }
+    .card {
+        background-color: $DarkBlue;
+        border-radius: 15px;
+        color: #fff;
+        height: 199px;
+        min-width: 255px;
+        padding: 29px 0 0 30px;
+        position: absolute;
+        top: 45px;
+        .title {
+            align-items: center;
+            display: flex;
+            height: 21px;
+            justify-content: space-between;
+            width: 190px;
+            p {
+                @include text($size: 18px, $weight: 500, $lineHeight: 21px);
+            }
+            img {
+                height: 5px;
+                width: 16px;
+                cursor: pointer;
+            }
+        }
+        .current-time {
+            @include text($size: 56px, $weight: 300, $lineHeight: 66px);
+            margin: 24px 0 8px;
+        }
+        .past-time {
+            @include text($size: 15px, $weight: 400, $lineHeight: 18px);
+            color: hsl(236, 100%, 87%);
+        }
+    }
+}
